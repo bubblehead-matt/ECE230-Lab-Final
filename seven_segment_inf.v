@@ -29,7 +29,7 @@ assign ones = count % 10;
 
 
 // 3. Scanner (digit select)
-reg [1:0] an_cnt;
+    reg [1:0] an_cnt = 0;
 
 always @(posedge scan_clk) begin
     if (rst)
