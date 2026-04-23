@@ -7,7 +7,7 @@ module timer(
     input [5:0] load_value, //Value to load into counter register. Counter will then start counting from this value
     output reg [5:0] state     //6-bits to represent the highest number 59
 );
-    always @#(posedge clk or posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst)
             state <=6'd0;
         else if (load)
